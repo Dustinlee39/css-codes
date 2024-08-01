@@ -1,0 +1,38 @@
+/* Button with Hover, Focus States, and ARIA Attributes */
+:root {
+    --button-bg: #4CAF50;
+    --button-bg-hover: #45a049;
+    --button-color: #ffffff;
+    --button-padding: 15px 32px;
+    --button-font-size: 16px;
+    --button-margin: 4px 2px;
+    --button-border-radius: 8px;
+    --button-transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button {
+    background-color: var(--button-bg);
+    border: none;
+    color: var(--button-color);
+    padding: var(--button-padding);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--button-font-size);
+    margin: var(--button-margin);
+    cursor: pointer;
+    border-radius: var(--button-border-radius);
+    transition: var(--button-transition);
+    outline: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-bg-hover);
+    transform: scale(1.05);
+    outline: none;
+}
+
+.button[aria-pressed="true"] {
+    background-color: var(--button-bg-hover);
+}
