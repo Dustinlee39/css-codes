@@ -1,0 +1,21 @@
+/* Intelligent Fade-in Animation with Variables */
+:root {
+    --fade-duration: 2s;
+    --fade-timing: ease-in-out;
+    --move-distance: 20px;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(var(--move-distance));
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--fade-duration) var(--fade-timing);
+}
