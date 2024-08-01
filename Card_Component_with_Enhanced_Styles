@@ -1,0 +1,43 @@
+/* Card Component with Shadow, Hover Effect, and Accessibility */
+:root {
+    --card-bg: #ffffff;
+    --card-border: 1px solid #ddd;
+    --card-border-radius: 8px;
+    --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --card-padding: 20px;
+    --card-text-color: #666;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--card-box-shadow-hover);
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: var(--card-padding);
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1em;
+    color: var(--card-text-color);
+}
